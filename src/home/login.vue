@@ -2,7 +2,7 @@
     <div class="main">
         <Card style="width: 80vw">
             <template #header>
-                <img alt="user header" src="蔡男神.png" class="imgg"/>
+                <img alt="user header" src="../assets/蔡男神.png" class="imgg"/>
             </template>
             <template #title> 登录</template>
 
