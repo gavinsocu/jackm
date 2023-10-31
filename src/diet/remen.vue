@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="cll">
     <div class="remen" v-for="item in dietlist" :key="item.id">
         <div class="img">
             <img :src="item.img" alt="">
@@ -34,7 +34,7 @@ export default {
 .remen{
     width: 100%;
     height: 120px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(196, 191, 191);
     /* border-top: 1px solid black; */
     /* border-radius: 20px; */
     overflow: hidden;
@@ -79,5 +79,11 @@ p{
     font-size: 13px;
     font-weight: 800;
     color: rgba(24, 21, 21, 0.822);
+}
+.cll{
+    width: 100%;
+    height: 81vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 </style>
