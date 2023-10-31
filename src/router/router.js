@@ -45,6 +45,14 @@ const router = createRouter({
             name: "diet",
             component: () => import("../diet/diet.vue"),
         },
+        {
+            path:"/diet/mywork",
+            name:"mywork",
+            component:()=>import("../diet/mywork.vue"),
+            meta:{
+                mywork:true
+            }
+        }
     ],
 });
 

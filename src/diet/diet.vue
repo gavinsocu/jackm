@@ -6,7 +6,7 @@
     </van-tab>
     <van-tab >
         <template #title> <Icon name="list-switch"  /> 分类</template>
-        内容 1
+        <button @click="gomywork">sjsj</button>
     </van-tab>
     <van-tab >
         <template #title> <Icon name="smile-o"  /> 功效</template>
@@ -36,6 +36,11 @@ export default {
                 {id:3,name:'兵马俑ai',gonxiao:'快来体验',img:'./兵马俑.jpg',leibie:'AI换脸'},
             ]
         }
+    },
+    methods:{
+        gomywork(){
+            this.$router.push('/diet/mywork');
+        },
     }
 }
 </script>

@@ -51,15 +51,15 @@ data(){
         'red',''
     ],
     quanzilist:[
-        {id:1,name:'蔡女神',jianli:'宽以待己，严以律人',
-        logo:'./蔡女神.png',
-        jieshao:'我叫蔡卓奇，我是大美女',
-        img:['./蔡女神.png','./蔡女神.png','./蔡女神.png','./蔡女神.png','./蔡女神.png','./蔡女神.png'],
+        {id:1,name:'记录生活的老王',jianli:'',
+        logo:'./11.webp',
+        jieshao:'分享好看的天空照',
+        img:['./11.jpg','./22.jpg','./33.jpg','./44.jpg','./55.jpg','./66.jpg'],
         },
-        {id:2,name:'蔡女神',jianli:'宽以待己，严以律人',
-        logo:'./蔡女神.png',
-        jieshao:'我叫蔡卓奇，我是大美女',
-        img:['./蔡女神.png','./蔡女神.png','./蔡女神.png','./蔡女神.png','./蔡女神.png','./蔡女神.png'],
+        {id:2,name:'阿蔡',jianli:'',
+        logo:'./222.jpg',
+        jieshao:'好吃的面条',
+        img:['./111.jpg'],
         },
     ]
 }
@@ -123,8 +123,8 @@ p{
     object-fit: cover;
     width: 120px;
     height: 150px;
-    border-radius: 10px;
-    margin: 0;
+    border-radius: 2px;
+    margin: 1px;
 }
 .xg{
     width: 100vw;
@@ -155,5 +155,9 @@ p{
     width: 33%;
     height: 50px;
     text-align: center;
+}
+.imgg{
+    display: flex;
+    flex-wrap: wrap;
 }
 </style>

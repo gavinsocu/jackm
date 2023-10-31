@@ -2,6 +2,9 @@
   <div class="login" v-if="$route.meta.login">
     <router-view />
   </div>
+  <div class="login" v-if="$route.meta.login">
+    <router-view />
+  </div>
   <div class="home" v-if="!$route.meta.login">
     <navbar :listname="list" :listnum="listnum"></navbar>
     <router-view />
