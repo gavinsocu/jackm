@@ -20,7 +20,7 @@
 <script>
 import { Tab,Tabs,Icon } from 'vant';
 import fenlei from './fenlei.vue';
-import herbsList from './herbslist.vue';
+import herbsList from './herbsList.vue';
 import remen from './remen.vue';
 import jsondata from '../json/herbslist.json';
 export default {
