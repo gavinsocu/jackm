@@ -5,7 +5,7 @@
                 <img :src="item.img" alt="">
             </div>
             <div class="text">
-                <div class="zt1">
+                <div class="zt1"> 
                     <div class="m">
                         <h3>{{ item.name }}</h3>
                     </div>
