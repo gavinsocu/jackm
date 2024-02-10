@@ -1,57 +1,130 @@
 <template>
-    <div class="mylogoclass">
-        <div class="logo" @click="goLogin"></div>
+    <div class="main">
+    <div class="mylogo">
+        <span class="left" @click="goLogin"><img src="../assets/蔡男神.png" alt="" /></span>
+        <span class="right">
+        <span style="font-size: x-large; font-weight: 700">蔡男神</span>
+        <span>信息管理与信息系统</span>
+        </span>
     </div>
-    <div class="text">
+    <div class="body">
+        <div class="myMassage" @click="navToMyMassage">
         <span>个人信息</span>
-        <span>消息通知</span>
-        <span>客服反馈</span>
-        <span>更多设置</span>
+        <span>></span>
+        </div>
+        <div class="myMassage" @click="navToHistoryMassage">
+        <span>浏览记录</span>
+        <span>></span>
+        </div>
+        <div class="myMassage" @click="navToMoneyMassage">
+        <span>账本</span>
+        <span>></span>
+        </div>
+        <div class="myMassage">
+        <span>设置</span>
+        </div>
     </div>
+    </div>
+    <div class="foot"></div>
 </template>
+、
 
 <script>
-import {List} from 'vant';
 export default {
-    components:{
-        List
+    name: 'user',
+    components: {},
+    data() {
+    return {
+    };
     },
-    methods:{
-        goLogin(){
-            this.$router.push('/login');
-        },
-    }
-}
+    methods: {
+    navToMyMassage() {
+        this.$router.push('/me/myMassage');
+    },
+    navToHistoryMassage() {
+        this.$router.push('/me/historyMassage');
+    },
+    navToMoneyMassage() {
+        this.$router.push('/me/moneyMassage');
+    },
+    goLogin() {
+        this.$router.push('/login');
+    },
+},
+};                              
 </script>
 
 <style scoped>
-.mylogoclass{
-    width: 100vw;
-    height: 40vh;
-    background-image: radial-gradient(circle, #e9eef4, #cfdef6, #baccf7, #acb8f6, #a6a3f2);
-    position: relative;
+.main {
+    height: 93vh;
+    overflow-y: auto;
+    background-color: #f9f9f9;
 }
-.logo{
-    width: 100px;
-    height: 100px;
-    background:url(./蔡女神.png);
-    background-size: cover;
-    border-radius: 50%;
-    left: 40vw;
-    position: absolute;
-    top: 18vh;
-}
-span{
-    display: block;
+
+.mylogo {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    text-align: start;
-    padding-left: 10px;
-    font-size: 16x;
-    color: #000;
-    font-weight: bold;
-    border-bottom: .5px solid rgb(216, 215, 215);
-    
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-image: url("../assets/30.jpg"); */
+    background-size: cover;
+}
+.mylogo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.body {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.myMassage {
+    width: 95%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 50px;
+    box-shadow: 0px 0px 5px #dcdfe6;
+}
+.myMassage span:nth-child(1) {
+    text-align: left;
+    margin-left: 20px;
+    font-size: large;
+    font-weight: 600;
+    float: left;
+}
+.myMassage span:nth-child(2) {
+    float: right;
+    margin-right: 20px;
+    bottom: 5px;
+    margin-left: 20px;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.left {
+    position: absolute;
+    float: left;
+    left: 6%;
+}
+.right {
+    /* 文字靠左显示 */
+    text-align: left;
+    font-size: large;
+    font-weight: 400;
+
+    position: absolute;
+    float: left;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
 }
 </style>

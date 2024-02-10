@@ -82,7 +82,7 @@ data(){
 .head{
     width: 100vw;
     height: 45px;
-
+    background-color: #fff; 
 }
 .logo{
     width: 45px;

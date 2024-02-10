@@ -1,11 +1,9 @@
 <template>
         <div class="make">
-        <van-button class="open" type="primary" round ><div><p class="p1">配对</p></div> </van-button>
-            
-  
+        <van-button class="open" type="primary" round ><div><p class="p1">问诊</p></div> </van-button>
         <br>
         <br>
-        <div class="pp"><p>一键匹配陪拍</p> </div>
+        <div class="pp"><p>一键AI问诊</p> </div>
     </div>
 </template>
 

@@ -1,7 +1,8 @@
 <template>
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item v-for="(image, index) in images" :key="index"
-        :style="{ backgroundImage: `url(${image})` }"></van-swipe-item>
+        :style="{ backgroundImage: `url(${image})` }"
+        style="background-size: cover;height: 220px;"></van-swipe-item>
     </van-swipe>
 
 </template>
@@ -25,7 +26,7 @@ export default {
 }
 </script>
 
-<style SCOPED>
+<style scoped>
 .my-swipe .van-swipe-item {
     color: #fff;
     font-size: 20px;

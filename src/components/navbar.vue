@@ -1,7 +1,6 @@
 <template>
     <van-nav-bar
     :title=listname[listnum].name
-
     @click-left="onClickLeft"
     />
 </template>

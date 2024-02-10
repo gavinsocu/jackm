@@ -6,9 +6,9 @@
     <router-view />
   </div>
   <div class="home" v-if="!$route.meta.login">
-    <navbar :listname="list" :listnum="listnum"></navbar>
+    <navbar :listname="list" :listnum="listnum" v-show="!$route.meta.childrenPage"></navbar>
     <router-view />
-      <van-tabbar v-model="active" route>
+      <van-tabbar v-model="active" route v-show="!$route.meta.childrenPage">
             <van-tabbarItem @click=" listnum = 0 " to="/home" icon="home-o">{{ list[0].name }}</van-tabbarItem>
             <van-tabbarItem @click=" listnum = 1 " to="/aips" icon="search">{{ list[1].name }}</van-tabbarItem>
             <van-tabbarItem @click=" listnum = 2 " to="/diet" icon="friends-o">{{ list[2].name }}</van-tabbarItem>
@@ -42,7 +42,7 @@ export default {
         list:[
           {name:'首页',path:'/home'},
           {name:'圈子',path:'/aips'},
-          {name:'精选',path:'/diet'},
+          {name:'药膳',path:'/diet'},
           {name:'我的',path:'/me'},
         ]
       }

@@ -1,13 +1,13 @@
 <template>
     <div class="cll">
-    <div class="remen" v-for="item in dietlist" :key="item.id">
+    <div class="remen" v-for="item in dietlist" :key="item.id" @click="redirectToPage(item.id)">
         <div class="img">
             <img :src="item.img" alt="">
         </div>
         <div class="text">
             <div class="zt1">
                 <div class="m"><h3>{{ item.name }}</h3></div>
-                <div class="leibie"><van-tag type="primary" class="sss"> {{ item.leibie }}</van-tag></div>
+                <div class="leibie"><van-tag :type="item.color" class="sss"> {{ item.leibie }}</van-tag></div>
             </div>
             <div class="zt2"><p>{{ item.gonxiao }}</p></div>
         </div>
@@ -26,11 +26,21 @@ export default {
             type: Array,
             required: true,
         },
+    },
+    methods:{
+        goHerbs(){
+            this.$router.push({name:'herbs'});
+        },
+        redirectToPage(itemId) {
+        // 根据卡片的id进行页面跳转
+        // 使用Vue Router的例子
+        this.$router.push({ name: 'herbsPage', params: { herbsId:itemId } });
+        },
     }
 }
 </script>
 
-<style>
+<style scoped>
 .remen{
     width: 100%;
     height: 120px;

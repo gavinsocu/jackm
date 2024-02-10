@@ -9,6 +9,11 @@ arrowdown: 'icon-xiangxia',
 searh: "icon-sousuo",
 user:"icon-user",
 shouye:"icon-shouye",
+back:"icon-fenxiang",
+leaf:"icon-leaf-sharp",
+list:"icon-listing",
+warning:"icon-warning",
+cook:"icon-soup",
 };
 export default {
 props:{
@@ -30,7 +35,6 @@ computed:{
 </script>
 
 <style scoped>
-@import '//at.alicdn.com/t/c/font_4183937_jhx7keivp7b.css';
+@import '//at.alicdn.com/t/c/font_4183937_67t43dwiy4.css';
 
 </style>
-```

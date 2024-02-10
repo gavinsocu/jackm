@@ -33,6 +33,30 @@ const router = createRouter({
             },
         },
         {
+            path: '/me/myMassage',
+            name: 'myMassage',
+            component: () => import('../me/myMassage.vue'),
+            meta: {
+            childrenPage: true,
+            },
+        },
+        {
+            path: '/me/historyMassage',
+            name: 'historyMassage',
+            component: () => import('../me/historyMassage.vue'),
+            meta: {
+            childrenPage: true,
+            },
+        },
+        {
+            path: '/me/moneyMassage',
+            name: 'moneyMassage',
+            component: () => import('../me/moneyMassage.vue'),
+            meta: {
+            childrenPage: true,
+            },
+        },
+        {
             path: "/aips",
             name: "aips",
             component: () => import("../aips/aips.vue"),
@@ -52,6 +76,30 @@ const router = createRouter({
             meta:{
                 mywork:true
             }
+        },
+        // {
+        //     path:"/diet/herbs",
+        //     name:"herbs",
+        //     component:()=>import("../components/herbs.vue"),
+        //     meta:{
+        //         childrenPage:true
+        //     }
+        // },
+        {
+            path:'/diet/:herbsId',
+            name:'herbsPage',
+            component:()=>import('../components/herbs.vue'),
+            meta:{
+                childrenPage:true
+            },
+        },
+        {
+            path:'/diet/:classify',
+            name:'classifyPage',
+            component:()=>import('../diet/classify.vue'),
+            meta:{
+                childrenPage:true
+            },
         }
     ],
 });
